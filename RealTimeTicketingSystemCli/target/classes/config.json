@@ -1,0 +1,5 @@
+{
+  "maxCapacity": 10,
+  "ticketsPerRelease": 5,
+  "retrievalRate": 1000
+}
