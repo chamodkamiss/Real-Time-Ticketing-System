@@ -85,11 +85,11 @@ public class Application {
         System.out.println();
         System.out.println("----------Real Time Ticketing System----------");
         System.out.println();
-        System.out.println("1. Start Vendor");
-        System.out.println("2. Start Customer");
-        System.out.println("3. Show available tickets");
-        System.out.println("4. Show ticket purchased");
-        System.out.println("6. Stop System");
+        System.out.println("1. Configure System");
+        System.out.println("2. Start Vendor");
+        System.out.println("3. Start Customer");
+        System.out.println("4. View tickets");
+        System.out.println("6. Exit");
         System.out.println();
         System.out.print("Enter your choice: ");
     }
