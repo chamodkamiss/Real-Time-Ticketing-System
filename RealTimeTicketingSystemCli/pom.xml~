@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!-- Jackson for JSON parsing -->
+        <!-- Gson for JSON parsing -->
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -16,7 +16,11 @@
             <version>2.11.0</version>
         </dependency>
 
-        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.20</version>
+        </dependency>
 
         <!-- Apache HttpClient for REST communication -->
         <dependency>
@@ -25,4 +29,6 @@
             <version>4.5.13</version>
         </dependency>
     </dependencies>
+
+
 </project>
