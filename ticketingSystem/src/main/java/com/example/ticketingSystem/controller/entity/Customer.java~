@@ -1,4 +1,0 @@
-package com.example.ticketingSystem.controller.entity;
-
-public class Customer {
-}

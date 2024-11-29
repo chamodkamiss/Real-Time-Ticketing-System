@@ -5,30 +5,36 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Ticket {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
-    private String eventName;
+    private int id;
+
+    private String event;
     private boolean isSold = false;
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
     public String getEventName() {
-        return eventName;
+        return event;
     }
 
-    public void setEventName(String eventName) {
-        this.eventName = eventName;
+    public void setEventName(String event) {
+        this.event = event;
     }
 
     public boolean isSold() {

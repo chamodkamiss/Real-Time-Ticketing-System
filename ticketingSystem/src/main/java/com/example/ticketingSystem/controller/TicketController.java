@@ -1,6 +1,7 @@
 package com.example.ticketingSystem.controller;
 
 
+import com.example.ticketingSystem.controller.dto.TicketDto;
 import com.example.ticketingSystem.controller.entity.Ticket;
 import com.example.ticketingSystem.controller.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,23 +18,29 @@ public class TicketController {
     @Autowired
     private TicketService ticketService;
 
-    @GetMapping
-    public List<Ticket> getAllTickets() {
-        return ticketService.getAllTickets();
+
+
+    @GetMapping("/getTicket")
+    public String getTicket() {
+        return "Ticket";
     }
 
-    @PostMapping("/purchase/{id}")
-    public Ticket purchaseTicket(@PathVariable long id) {
-        boolean success = ticketService.purchaseTicket(id);
-        if (!success) {
-            return null;
-        }
-        else {
-
-
-        }
-
+    @PostMapping("/saveTicket")
+    public TicketDto addTicketsToPool(@RequestBody TicketDto ticketDto) {
+        return ticketService.addTicketsToPool(ticketDto);
     }
+
+
+    @PutMapping("/updateTicket")
+    public String updateTicket() {
+        return "pTicket";
+    }
+    @DeleteMapping("/deleteTicket")
+    public String deleteTicket() {
+        return "dTicket";
+    }
+
+
 
 
 }
