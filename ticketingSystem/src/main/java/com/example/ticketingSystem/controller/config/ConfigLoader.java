@@ -5,12 +5,10 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 
 @Component
 public class ConfigLoader {
-    private final Config cliconfig;
-
+    private static  Config cliconfig;
 
     public ConfigLoader()throws IOException{
         String filepath = "C:\\Users\\HP\\OneDrive\\Documents\\GitHub\\Real-Time-Ticketing-System\\RealTimeTicketingSystemCli\\src\\main\\resources\\config.json";
@@ -19,7 +17,7 @@ public class ConfigLoader {
         this.cliconfig= objectMapper.readValue(new File(filepath), Config.class);
 
     }
-    public Config getCliconfig() {
+    public static Config getCliconfig() {
         return cliconfig;
     }
 }

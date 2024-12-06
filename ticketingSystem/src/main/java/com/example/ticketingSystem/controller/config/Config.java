@@ -1,5 +1,7 @@
 package com.example.ticketingSystem.controller.config;
 
+import com.example.ticketingSystem.controller.util.TicketPool;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.Serializable;
@@ -47,4 +49,6 @@ public class Config implements Serializable {
     public Map<String, Object> toMap() {
         return Map.of("totalTickets", totalTickets, "maxCapacity", maxCapacity, "releaseRate", releaseRate, "retrievalRate", retrievalRate);
     }
+
+
 }

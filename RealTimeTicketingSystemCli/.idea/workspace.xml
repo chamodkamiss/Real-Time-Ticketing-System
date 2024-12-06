@@ -5,36 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8df2b6b9-f1a3-4c07-8a0b-fae1bb95e867" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/cli/ApiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/cli/TicketingCli.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/Configure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ticketingSystem/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/VendorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/service/VendorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/service/impl/TicketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/util/CustomerRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/util/VendorRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cli/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cli/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/SystemParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cli/Configure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cli/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cli/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cli/TicketingCli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cli/TicketingCli.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/TicketPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/TicketPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/Configure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/Configure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/cli/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/cli/Configure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketingSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/cli/ApiClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/cli/ApiClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/cli/TicketingCli.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/cli/TicketingCli.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/models/TicketPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/Vendor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/util/Configure.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/util/Configure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/util/SystemParameter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/util/SystemParameter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/TicketingSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/TicketingSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/ConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/ConfigController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/dto/CustomerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/config/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/config/ConfigLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/dto/TicketDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/dto/TicketDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/dto/VendorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/dto/VendorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/entity/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/entity/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/entity/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/entity/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/repo/TicketRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/repo/TicketRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/repo/VendorRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/repo/VendorRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/TicketingSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/TicketingSystemApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/UserContoller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/entity/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/entity/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/ConfigController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/ConfigController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/TicketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/TicketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/config/ConfigLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/config/ConfigLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/dto/ConfigDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/dto/TicketDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/dto/TicketDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/dto/VendorDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/dto/VendorDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/entity/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/entity/Ticket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/entity/Vendor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/entity/Vendor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/repo/TicketRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/repo/TicketRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/service/TicketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/service/TicketService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +98,9 @@
     "com.codeium.enabled": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -126,6 +147,10 @@
           <line>12</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

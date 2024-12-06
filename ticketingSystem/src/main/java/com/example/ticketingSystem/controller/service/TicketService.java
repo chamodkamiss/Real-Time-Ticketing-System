@@ -1,33 +1,19 @@
 package com.example.ticketingSystem.controller.service;
 
 import com.example.ticketingSystem.controller.dto.TicketDto;
-import com.example.ticketingSystem.controller.entity.Ticket;
-import com.example.ticketingSystem.controller.repo.TicketRepo;
-import jakarta.transaction.Transactional;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+public interface TicketService {
+    void addTicket(String ticketId);
 
-@Service
-@Transactional
-public class TicketService {
-    @Autowired
-    private TicketRepo ticketRepo;
+    String removeTicket();
 
-    @Autowired
-    private ModelMapper modelMapper;
+    List<TicketDto> getAllTickets();
 
-    public TicketDto addTicketsToPool(TicketDto ticketDto) {
-        ticketRepo.save(modelMapper.map(ticketDto, Ticket.class));
-        return ticketDto;
-    }
+    TicketDto getTicketById(String ticketId);
 
-    public List<Ticket> getAllTickets() {
-        return ticketRepo.findAll();
-    }
+    List<String >getTicketsInPool();
 
-
+//    boolean deleteTicket(String ticketId);
 }

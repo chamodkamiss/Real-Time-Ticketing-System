@@ -10,38 +10,47 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
+
 public class Ticket {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-    private int id;
+    private String ticketId;
+    private Long timestamp;
 
-    private String event;
-    private boolean isSold = false;
+    private boolean is_sold= false;
+
 
     public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getEventName() {
-        return event;
+    public Long getTimestamp() {
+        return timestamp;
     }
 
-    public void setEventName(String event) {
-        this.event = event;
+    public void setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
     }
 
-    public boolean isSold() {
-        return isSold;
+    public String getTicketId() {
+        return ticketId;
     }
 
-    public void setSold(boolean sold) {
-        isSold = sold;
+    public void setTicketId(String ticketId) {
+        this.ticketId = ticketId;
+    }
+
+    public boolean isIs_sold() {
+        return is_sold;
+    }
+
+    public void setIs_sold(boolean is_sold) {
+        this.is_sold = is_sold;
     }
 }

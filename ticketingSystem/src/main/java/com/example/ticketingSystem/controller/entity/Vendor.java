@@ -1,9 +1,6 @@
 package com.example.ticketingSystem.controller.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +13,16 @@ public class Vendor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column (nullable = false , unique = true)
     private String name;
+
+
+
+//    public Vendor(int id, String name) {
+//        this.id = id;
+//        this.name=name;
+//    }
+
 
     public long getId() {
         return id;

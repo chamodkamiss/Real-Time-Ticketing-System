@@ -10,7 +10,6 @@ public class TicketingCli {
     static SystemParameter parameters;
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-      ApiClient apiClient = new ApiClient("http://localhost:8080/api/v1/ticket");
       Configure.load();
       boolean running = true;
 
@@ -19,7 +18,7 @@ public class TicketingCli {
 
       while (running){
           try {
-                System.out.println("Real Time Ticketing System");
+                System.out.println("\nReal Time Ticketing System");
                 System.out.println();
                 System.out.println("1. Configure System");
                 System.out.println("2. Start Vendor");
@@ -34,6 +33,11 @@ public class TicketingCli {
                     case 1:
                         configureSystem();
                         break;
+                    case 2:
+                        ApiClient.saveTicket();
+
+
+
     //                 case 2:
     //                     apiClient.startVendor();
     //                    break;
@@ -52,8 +56,10 @@ public class TicketingCli {
           }catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid number.");
                 scanner.nextLine();
+          } catch (Exception e) {
+              throw new RuntimeException(e);
           }
-     }
+      }
 
 
 
@@ -63,6 +69,7 @@ public class TicketingCli {
     public static void configureSystem() {
         try {
             parameters = Configure.load();
+            System.out.println("System Parameters:\n");
             System.out.println("maxCapacity: " + parameters.getMaxCapacity());
             System.out.println("releaseRate: " + parameters.getReleaseRate());
             System.out.println("retrievalRate: " + parameters.getRetrievalRate());

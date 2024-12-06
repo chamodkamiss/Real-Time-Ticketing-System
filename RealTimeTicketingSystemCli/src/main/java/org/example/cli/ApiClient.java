@@ -1,18 +1,23 @@
 package org.example.cli;
 
-import org.springframework.web.client.RestTemplate;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+
 
 public class ApiClient {
-    private final RestTemplate restTemplate;
-    private final String baseUrl;
+    private static final String BASE_URL = "http://localhost:8080/api/v1/tickets";
 
+    public static void saveTicket() throws Exception{
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(BASE_URL+"/startVendor")).POST(HttpRequest.BodyPublishers.noBody()).build();
 
-    public ApiClient(String baseUrl) {
-        this.restTemplate = new RestTemplate();
-        this.baseUrl = baseUrl;
-    }
-
-    public void startVendor() {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
+        System.out.println("Response:"+ response.body());
 
     }
+
+
 }

@@ -24,7 +24,6 @@ public class Configure {
         try {
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(CONFIG_FILE_PATH), systemParameter);
 
-
         }catch (IOException e) {
             throw new RuntimeException("Failed to save configuration file: " + CONFIG_FILE_PATH, e);
         }
