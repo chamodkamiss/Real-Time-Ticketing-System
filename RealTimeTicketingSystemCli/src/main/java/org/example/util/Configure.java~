@@ -45,13 +45,9 @@ public class Configure {
             parameters = new SystemParameter();
 
             int maxCapacity = getValidatedInput(scanner, "Enter max ticket capacity: ", 1, Integer.MAX_VALUE);
-            parameters.setMaxCapacity(maxCapacity);
             int totalTickets = getValidatedInput(scanner, "Enter total tickets available in the system: ", 1, maxCapacity);
-            parameters.setTotalTickets(totalTickets);
             int ticketReleaseRate = getValidatedInput(scanner, "Enter ticket release rate (ms): ", 100, 10000);
-            parameters.setReleaseRate(ticketReleaseRate);
             int customerRetrievalRate = getValidatedInput(scanner, "Enter customer retrieval rate (ms): ", 100, 10000);
-            parameters.setRetrievalRate(customerRetrievalRate);
 
 
 //
@@ -76,20 +72,6 @@ public class Configure {
             System.out.println("Release rate: " + parameters.getReleaseRate());
             System.out.println("Retrieval rate: " + parameters.getRetrievalRate());
         }
-    }
-
-    private static int getValidatedInput(Scanner scanner, String message, int min, int max) {
-        int value;
-        while (true) {
-            System.out.print(message);
-            value = scanner.nextInt();
-            if (value >= min && value <= max) {
-                break;
-            } else {
-                System.out.println("Invalid input. Please enter a value between " + min + " and " + max + ".");
-            }
-        }
-        return value;
     }
 
 
