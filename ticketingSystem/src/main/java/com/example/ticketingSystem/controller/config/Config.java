@@ -14,6 +14,14 @@ public class Config implements Serializable {
     private int releaseRate;
     private int retrievalRate;
 
+
+//    public Config(int totalTickets, int maxCapacity, int releaseRate, int retrievalRate) {
+//        this.totalTickets = totalTickets;
+//        this.maxCapacity = maxCapacity;
+//        this.releaseRate = releaseRate;
+//        this.retrievalRate = retrievalRate;
+//    }
+
     public int getTotalTickets() {
         return totalTickets;
     }

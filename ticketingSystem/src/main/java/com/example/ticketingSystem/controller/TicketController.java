@@ -12,9 +12,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/tickets")
+@CrossOrigin
 public class TicketController {
     private final TicketService ticketService;
     private final ConfigLoader configLoader;
+
 
     @Autowired
     public TicketController(TicketService ticketService, ConfigLoader configLoader) {
@@ -28,19 +30,30 @@ public class TicketController {
     }
 
     //save a new ticket
-    @PostMapping("/startVendor")
-    public ResponseEntity<String > addTicket(@RequestParam String ticketId){
-        ticketService.addTicket(ticketId);
-        return ResponseEntity.ok("Ticket saved successfully."+ ticketId);
+//    @PostMapping("/addTicket")
+//    public ResponseEntity<String > addTicket(@RequestParam String ticketId){
+//        ticketService.addTicket(ticketId);
+//        return ResponseEntity.ok("Ticket saved successfully."+ ticketId);
+//    }
+    @PostMapping
+    public ResponseEntity<String > addTicket(@RequestBody TicketDto ticketDto){
+        TicketDto savedTicket = ticketService.saveTicket(ticketDto);
+        return ResponseEntity.ok("Ticket saved successfully."+ savedTicket.getTicketId());
     }
 
-    @PostMapping("/customer")
-    public ResponseEntity<String > purchaseTicket(){
-        String ticketId = ticketService.removeTicket();
-        return ResponseEntity.ok("Ticket purchased: "+ ticketId);
+//    @PostMapping("/removeTicket")
+//    public ResponseEntity<String > purchaseTicket(){
+//        String ticketId = ticketService.removeTicket();
+//        return ResponseEntity.ok("Ticket purchased: "+ ticketId);
+//    }
+
+    @DeleteMapping("/{ticketId}")
+    public ResponseEntity<String > deleteTicket(@PathVariable String ticketId){
+        ticketService.deleteTicket(ticketId);
+        return ResponseEntity.ok("Ticket deleted: "+ ticketId);
     }
 
-    @GetMapping
+    @GetMapping("/allTickets")
     public ResponseEntity<List<TicketDto>> getAllTickets(){
         return ResponseEntity.ok(ticketService.getAllTickets());
     }

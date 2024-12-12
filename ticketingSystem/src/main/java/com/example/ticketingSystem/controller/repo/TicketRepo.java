@@ -9,4 +9,6 @@ import java.util.Optional;
 public interface TicketRepo extends JpaRepository<Ticket, Long> {
 
     Optional<Ticket> findByTicketId(String ticketId);
+
+    void deleteByTicketId(String ticketId);
 }

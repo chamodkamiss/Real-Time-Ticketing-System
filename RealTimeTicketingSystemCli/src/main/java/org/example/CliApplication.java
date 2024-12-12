@@ -9,10 +9,18 @@ import org.example.util.SystemParameter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static org.example.util.Configure.configureSystem;
+
 public class CliApplication {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         SystemParameter parameters = Configure.load();
+        if (parameters == null) {
+            parameters = new SystemParameter();
+            configureSystem(parameters,scanner);
+            Configure.save(parameters);
+        }
 
         TicketPool ticketPool = new TicketPool(parameters.getMaxCapacity(), parameters.getTotalTickets());
 
@@ -31,7 +39,8 @@ public class CliApplication {
 
                 if (choice == 1) {
                     // Configure system
-                    Configure.configureSystem();
+                    configureSystem(parameters,scanner);
+                    Configure.save(parameters);
                 }
                 else if (choice == 2) {
                     // Start operations

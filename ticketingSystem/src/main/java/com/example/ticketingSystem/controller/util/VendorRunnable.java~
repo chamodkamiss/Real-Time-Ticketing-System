@@ -33,35 +33,24 @@ public class VendorRunnable implements Runnable{
     public void run() {
         System.out.println("Vendor "+ vendorId+" added and started...");
         for (int i = 1; i <= ticketsToAdd; i++) {
+            boolean success = false;
             try {
-                String ticket = "Ticket-" + vendorId + "-" + i;
-                ticketPool.addTicket(ticket);
-                System.out.println("Vendor added: " + ticket);
+                success = ticketPool.addTicket("Ticket-" + vendorId + "-" + i);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ticketsAdded++;
+            if (!success) {
+                int remainingTickets = ticketsToAdd - ticketsAdded;
+                System.out.println("Vendor " + vendorId + " could not add ticket " + (remainingTickets+1) + " due to max capacity.");
+                break;
+            }
+            try {
                 Thread.sleep(releaseRate);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                System.out.println("Vendor thread interrupted.");
-                break;
             }
         }
-//            boolean success = false;
-//            try {
-//                success = ticketPool.addTicket("Ticket-" + vendorId + "-" + i);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//            ticketsAdded++;
-//            if (!success) {
-//                int remainingTickets = ticketsToAdd - ticketsAdded;
-//                System.out.println("Vendor " + vendorId + " could not add ticket " + (remainingTickets+1) + " due to max capacity.");
-//                break;
-//            }
-//            try {
-//                Thread.sleep(releaseRate);
-//            } catch (InterruptedException e) {
-//                Thread.currentThread().interrupt();
-//            }
-//        }
         System.out.println("Vendor " + vendorId + " finished adding tickets.");
 
     }
