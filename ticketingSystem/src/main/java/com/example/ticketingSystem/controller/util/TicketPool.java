@@ -32,39 +32,18 @@ public class TicketPool {
         while (tickets.size() >= maxCapacity) {
             System.out.println("Ticket pool is full. Vendor cannot add more tickets.");
             wait();
-//            return false; // Ticket addition failed
+
         }
-//        while (tickets.size() >= maxCapacity){
-//           System.out.println("Pool is full. Waiting... (Current size: " + tickets.size() + ")");
-//           wait();
-//       }
 
-       //add tickets to the pool
        tickets.add(ticket);
-//       totalTicketsAdded++;
 
-       // save ticket
-//        TicketDto ticketDto = new TicketDto();
-//        ticketDto.setTicketId(ticketId);
-//        ticketDto.setTimestamp(System.currentTimeMillis());
-//        ticketService.saveTicket(ticketDto);
        System.out.println("Added "+ ticket);
        notifyAll();
-//       return true;
+
     }
 
     // customers
 
-//    public synchronized String removeTicket() throws InterruptedException {
-//        while (tickets.isEmpty()) {
-//            System.out.println("Pool is empty. Customer waiting...");
-//            wait(); // Wait until tickets are available
-//        }
-//        String ticket = tickets.remove(0);
-//        System.out.println("Removed: " + ticket);
-//        notifyAll(); // Notify waiting vendors
-//        return ticket;
-//    }
     public synchronized String removeTicket(String ticketId) throws InterruptedException{
 
         while (tickets.isEmpty())
@@ -92,11 +71,6 @@ public class TicketPool {
         return ticket;
     }
 
-//    public synchronized String removeTicket() throws InterruptedException {
-//        return removeTicket(null); // Call the other method with `null` for default behavior
-//    }
-
-
 
     public synchronized int getTicketCount(){
         return tickets.size();
@@ -105,7 +79,5 @@ public class TicketPool {
     public synchronized List<String> getTickets() {
         return new ArrayList<>(tickets);
     }
-//    public synchronized int getTotalTicketsAdded(){
-//        return totalTicketsAdded;
-//    }
+
 }

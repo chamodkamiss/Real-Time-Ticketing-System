@@ -40,106 +40,20 @@ public class TicketServiceImpl implements TicketService {
     }
 
 
-//    @Override
-//    public void addTicket(String ticketId){
-//        try {
-//            ticketPool.addTicket(ticketId);
-//
-//            Ticket ticket = new Ticket();
-//            ticket.setTicketId(ticketId);
-////            ticket.setTimestamp(System.currentTimeMillis());
-//            ticketRepo.save(ticket);
-//            System.out.println("Ticket added to the pool and the database: "+ ticketId);
-//        }catch (InterruptedException e)
-//        {
-//            Thread.currentThread().interrupt();
-//            System.out.println("Failed to add ticket: "+ e.getMessage());
-//        }
-//    }
 
     @Transactional
     @Override
     public void deleteTicket(String ticketId){
         ticketRepo.deleteByTicketId(ticketId);
     }
-//    @Override
-//    public String removeTicket() {
-//        try {
-//            // Remove ticket from the pool
-//            String ticketId = ticketPool.removeTicket(String.valueOf(1));
-//
-//            // Mark the ticket as sold in the database
-//            Optional<Ticket> ticketOpt = ticketRepo.findByTicketId(ticketId);
-//            if (ticketOpt.isPresent()) {
-//                Ticket ticket = ticketOpt.get();
-////                ticket.setSold(true);
-//                ticketRepo.save(ticket);
-//
-//                System.out.println("Ticket removed from pool and marked as sold: " + ticketId);
-//            } else {
-//                System.out.println("Ticket not found in the database: " + ticketId);
-//            }
-//
-//        } catch (InterruptedException e) {
-//            Thread.currentThread().interrupt();
-//            System.out.println("Failed to remove ticket: " + e.getMessage());
-//        }
-//        return null;
-//    }
 
-//    @Override
-//    public void removeTicket(String ticketId){
-//        try {
-//            ticketPool.removeTicket(ticketId);
-//
-//            Optional<Ticket> ticketOpt = ticketRepo.findByTicketId(ticketId);
-//            if (ticketOpt.isPresent())
-//            {
-//                Ticket ticket = ticketOpt.get();
-////                ticket.setIs_sold(true);
-//                ticketRepo.save(ticket);
-//                System.out.println("Ticket removed from the pool and marked as sold: "+ ticketId);
-//            }
-//            else {
-//                System.out.println("Ticket not found in the database: "+ ticketId);
-//            }
-//
-//        }catch (InterruptedException e){
-//            Thread.currentThread().interrupt();
-//            System.out.println("Failed to remove ticket: ");
-//
-//        }
-//    }
-
-//    @Override
-//    public boolean deleteTicket(String ticketId) {
-//        Optional<Ticket> ticket = ticketRepo.findByTicketId(ticketId);
-//        if (ticket != null) {
-//            ticketRepo.delete(Ticket);
-//            return true;
-//        }
-//        return false;
-//    }
-
-
-
-
-
-//    @Override
-//    public void saveTicket(TicketDto ticketDto){
-//        Ticket ticket = modelMapper.map(ticketDto,Ticket.class);
-//        ticketRepo.save(ticket);
-//        System.out.println("Ticket saved." + ticket.getTicketId());
-//    }
 
     @Override
     public List<TicketDto> getAllTickets(){
         return ticketRepo.findAll().stream().
                 map(ticket -> modelMapper.map(ticket,TicketDto.class)).
                 collect(Collectors.toList());
-//        List<Ticket> tickets = ticketRepo.findAll();
-//        return tickets.stream().map(ticket -> modelMapper.map(ticket,TicketDto.class))
-//                .toList();
+
     }
 
     @Override
@@ -150,32 +64,6 @@ public class TicketServiceImpl implements TicketService {
                 .orElseThrow(()-> new RuntimeException("Ticket not found: "+ ticketId));
     }
 
-//    @Override
-//    public List<String> getTicketsInPool() {
-//        return ticketPool.getTickets();
-//    }
-
-//    @Override
-//    public boolean deleteTicket(TicketDto ticketDto) {
-//        ticketRepo.delete(modelMapper.map(ticketDto, Ticket.class));
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean deleteTicket(String ticketId) {
-//        return false;
-//    }
-
-//    @Override
-//    public boolean deleteTicket(String ticketId){
-//        Ticket ticket = ticketRepo.findByTicketId(ticketId);
-//        if (ticket != null)
-//        {
-//            ticketRepo.delete(ticket);
-//            return true;
-//        }
-//        return false;
-//    }
 
     public boolean deleteUser(TicketDto ticketDto) {
         ticketRepo.delete(modelMapper.map(ticketDto, Ticket.class));

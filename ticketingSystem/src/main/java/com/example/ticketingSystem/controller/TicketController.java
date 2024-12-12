@@ -29,23 +29,13 @@ public class TicketController {
         return ConfigLoader.getCliconfig().toMap();
     }
 
-    //save a new ticket
-//    @PostMapping("/addTicket")
-//    public ResponseEntity<String > addTicket(@RequestParam String ticketId){
-//        ticketService.addTicket(ticketId);
-//        return ResponseEntity.ok("Ticket saved successfully."+ ticketId);
-//    }
+
     @PostMapping
     public ResponseEntity<String > addTicket(@RequestBody TicketDto ticketDto){
         TicketDto savedTicket = ticketService.saveTicket(ticketDto);
         return ResponseEntity.ok("Ticket saved successfully."+ savedTicket.getTicketId());
     }
 
-//    @PostMapping("/removeTicket")
-//    public ResponseEntity<String > purchaseTicket(){
-//        String ticketId = ticketService.removeTicket();
-//        return ResponseEntity.ok("Ticket purchased: "+ ticketId);
-//    }
 
     @DeleteMapping("/{ticketId}")
     public ResponseEntity<String > deleteTicket(@PathVariable String ticketId){
@@ -62,32 +52,6 @@ public class TicketController {
     public ResponseEntity<TicketDto> getTicketById(@PathVariable String ticketId){
         return ResponseEntity.ok(ticketService.getTicketById(ticketId));
     }
-
-//    @PostMapping("/addTickets")
-//    public String addTicket(@RequestBody TicketDto ticketDto)
-//    {
-//        ticketService.saveTicket(ticketDto);
-//        return "Ticket added: "+ ticketDto.getTicketId();
-//    }
-
-//    @GetMapping("/getTickets")
-//    public List<TicketDto> getAllTickets()
-//    {
-//        return ticketService.getAllTickets();
-//    }
-
-    //delete ticket
-//    @DeleteMapping("/{ticketId}")
-//    public String removeTicket(@PathVariable String ticketId)
-//    {
-//        boolean removed = ticketService.deleteTicket(ticketId);
-//        if (removed){
-//            return "Ticket removed: "+ ticketId;
-//        }
-//        else {
-//            return "Ticket not found: "+ ticketId;
-//        }
-//    }
 
 
 }

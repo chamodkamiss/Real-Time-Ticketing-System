@@ -14,18 +14,6 @@ public class CustomerRunnable implements Runnable{
         this.customerId = customerId;
         this.retrievalRate = retrievalRate;
     }
-//    private final TicketPool ticketPool;
-//    private final int retrievalRate;
-//    private boolean running;
-//
-//    public CustomerRunnable(TicketPool ticketPool, Config config) {
-//        this.ticketPool = ticketPool;
-//        this.retrievalRate = config.getRetrievalRate();
-//    }
-
-//    public void stop(){
-//        running = false;
-//    }
 
     @Override
     public void run() {
@@ -46,38 +34,6 @@ public class CustomerRunnable implements Runnable{
         }
         System.out.println("Customer " + customerId + " finished purchasing tickets.");
     }
-//            String ticket = null;
-//            try {
-//                ticket = ticketPool.removeTicket(String.valueOf(i));
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//            if (ticket == null) {
-//                System.out.println("Customer " + customerId + " could not purchase ticket " + i + " because no tickets are available.");
-//                break;
-//            }
-//            System.out.println("Customer " + customerId + " purchased ticket: " + ticket);
-//            try {
-//                Thread.sleep(retrievalRate);
-//            } catch (InterruptedException e) {
-//                Thread.currentThread().interrupt();
-//            }
-//        }
 
-
-//    public void run() {
-//        try {
-//            while (running)
-//            {
-//                    String ticket = ticketPool.removeTicket();
-//                    System.out.println("Customer purchased: "+ ticket);
-//                    Thread.sleep(retrievalRate);
-//            }
-//        }catch (InterruptedException e) {
-//        Thread.currentThread().interrupt();
-//        System.out.println("Customer Thread interrupted.");
-//    }
-//
-//    }
 
 }
