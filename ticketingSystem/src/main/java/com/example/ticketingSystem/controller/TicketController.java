@@ -1,6 +1,6 @@
 package com.example.ticketingSystem.controller;
 
-import com.example.ticketingSystem.controller.config.ConfigLoader;
+import com.example.ticketingSystem.controller.config.Config;
 import com.example.ticketingSystem.controller.dto.TicketDto;
 import com.example.ticketingSystem.controller.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,25 +8,24 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/tickets")
 @CrossOrigin
 public class TicketController {
     private final TicketService ticketService;
-    private final ConfigLoader configLoader;
+    private final Config config;
 
 
     @Autowired
-    public TicketController(TicketService ticketService, ConfigLoader configLoader) {
+    public TicketController(TicketService ticketService, Config config) {
         this.ticketService = ticketService;
-        this.configLoader = configLoader;
+        this.config = config;
     }
 
     @GetMapping("/config")
-    public Map<String, Object> getConfig() {
-        return ConfigLoader.getCliconfig().toMap();
+    public String getConfig() {
+        return config.toString();
     }
 
 

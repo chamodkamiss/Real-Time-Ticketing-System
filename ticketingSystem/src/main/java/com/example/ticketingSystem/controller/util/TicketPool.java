@@ -2,14 +2,10 @@ package com.example.ticketingSystem.controller.util;
 
 
 import com.example.ticketingSystem.controller.config.Config;
-import com.example.ticketingSystem.controller.config.ConfigLoader;
-import com.example.ticketingSystem.controller.dto.TicketDto;
-import com.example.ticketingSystem.controller.service.TicketService;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 @Component
@@ -17,33 +13,25 @@ public class TicketPool {
 
     private final List<String> tickets ;
     private final int maxCapacity ;
-    private boolean running = true;
-//    private  int totalTicketsAdded;
 
+    public TicketPool( Config config) {
 
-    public TicketPool( Config configLoader) {
-
-        this.maxCapacity = ConfigLoader.getCliconfig().getMaxCapacity();
+        this.maxCapacity = config.getMaxCapacity();
         this.tickets = Collections.synchronizedList(new ArrayList<>());
     }
 
-    // vendors
+    // vendors add tickets to the pool
     public synchronized void addTicket(String  ticket) throws InterruptedException{
         while (tickets.size() >= maxCapacity) {
             System.out.println("Ticket pool is full. Vendor cannot add more tickets.");
             wait();
-
         }
-
        tickets.add(ticket);
-
        System.out.println("Added "+ ticket);
        notifyAll();
-
     }
 
-    // customers
-
+    // customers removed tickets from the pool
     public synchronized String removeTicket(String ticketId) throws InterruptedException{
 
         while (tickets.isEmpty())
@@ -70,7 +58,6 @@ public class TicketPool {
         notifyAll();
         return ticket;
     }
-
 
     public synchronized int getTicketCount(){
         return tickets.size();

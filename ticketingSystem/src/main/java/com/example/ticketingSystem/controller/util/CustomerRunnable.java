@@ -1,6 +1,5 @@
 package com.example.ticketingSystem.controller.util;
 
-import com.example.ticketingSystem.controller.config.Config;
 
 public class CustomerRunnable implements Runnable{
     private final TicketPool ticketPool;

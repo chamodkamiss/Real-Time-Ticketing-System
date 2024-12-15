@@ -1,7 +1,6 @@
 package com.example.ticketingSystem;
 
 import com.example.ticketingSystem.controller.config.Config;
-import com.example.ticketingSystem.controller.config.ConfigLoader;
 //import com.example.ticketingSystem.controller.entity.Vendor;
 import com.example.ticketingSystem.controller.util.CustomerRunnable;
 import com.example.ticketingSystem.controller.util.TicketPool;
@@ -14,13 +13,18 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.io.IOException;
+
 @SpringBootApplication
 public class TicketingSystemApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		SpringApplication.run(TicketingSystemApplication.class, args);
 
+
 	}
+
+
 
 	@Bean
 	public ModelMapper modelMapper() {

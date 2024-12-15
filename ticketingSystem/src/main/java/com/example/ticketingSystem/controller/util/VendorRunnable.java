@@ -1,6 +1,7 @@
 package com.example.ticketingSystem.controller.util;
 
-import com.example.ticketingSystem.controller.config.ConfigLoader;
+import com.example.ticketingSystem.controller.config.Config;
+
 
 public class VendorRunnable implements Runnable{
 
@@ -15,11 +16,11 @@ public class VendorRunnable implements Runnable{
     private int ticketsAdded = 0;
 
 
-    public VendorRunnable(TicketPool ticketPool, int ticketsToAdd, String vendorId, int configLoader) {
+    public VendorRunnable(TicketPool ticketPool, int ticketsToAdd, String vendorId, Config config) {
         this.ticketPool = ticketPool;
         this.ticketsToAdd = ticketsToAdd;
         this.vendorId = vendorId;
-        this.releaseRate = ConfigLoader.getCliconfig().getReleaseRate();
+        this.releaseRate = config.getReleaseRate();
 
     }
 

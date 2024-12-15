@@ -44,9 +44,9 @@ public class Config implements Serializable {
         while (true) {
             try {
                 System.out.print("Enter Ticket Release Rate (1-5): ");
-                int ReleaseRate = input.nextInt();
-                if (ReleaseRate >= 1 && newReleaseRate <= 5) {
-                    config.setTicketReleaseRate(newReleaseRate);
+                int newReleaseRate = input.nextInt();
+                if (newReleaseRate >= 1 && newReleaseRate <= 5) {
+                    config.setReleaseRate(newReleaseRate);
                     break;
                 } else {
                     System.out.println("Error: Please enter an integer value between 1 and 5");
@@ -107,7 +107,7 @@ public class Config implements Serializable {
     // Update configuration
     public Config updateConfiguration(Config newConfig) {
         this.totalTickets = newConfig.getTotalTickets();
-        this.ReleaseRate = newConfig.getTicketReleaseRate();
+        this.ReleaseRate = newConfig.getReleaseRate();
         this.customerRetrievalRate = newConfig.getCustomerRetrievalRate();
         this.maxCapacity = newConfig.getMaxCapacity();
         return this;
@@ -126,7 +126,7 @@ public class Config implements Serializable {
         return ReleaseRate;
     }
 
-    public void setTicketReleaseRate(int ticketReleaseRate) {
+    public void setReleaseRate(int ReleaseRate) {
         this.ReleaseRate = ReleaseRate;
     }
 
@@ -158,7 +158,7 @@ public class Config implements Serializable {
     public String toString() {
         return "Config{" +
                 "totalTickets=" + totalTickets +
-                ", ticketReleaseRate=" + ticketReleaseRate +
+                ", ticketReleaseRate=" + ReleaseRate +
                 ", customerRetrievalRate=" + customerRetrievalRate +
                 ", maxCapacity=" + maxCapacity +
                 ", running=" + running +
