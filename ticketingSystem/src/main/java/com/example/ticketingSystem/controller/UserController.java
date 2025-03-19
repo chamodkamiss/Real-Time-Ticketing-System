@@ -1,9 +1,8 @@
 package com.example.ticketingSystem.controller;
 
 
-import com.example.ticketingSystem.controller.dto.UserDto;
-import com.example.ticketingSystem.controller.entity.User;
-import com.example.ticketingSystem.controller.service.UserService;
+import com.example.ticketingSystem.dto.UserDto;
+import com.example.ticketingSystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

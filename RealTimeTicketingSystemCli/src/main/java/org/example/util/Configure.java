@@ -12,8 +12,6 @@ public class Configure {
     private static final String CONFIG_FILE_PATH = "src/main/resources/config.json";
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-
-
     //save file
     public static void save(SystemParameter systemParameter) {
         try {
@@ -58,7 +56,6 @@ public class Configure {
         systemParameter.setRetrievalRate(customerRetrievalRate);
 
         save(systemParameter);
-
 
     }
 

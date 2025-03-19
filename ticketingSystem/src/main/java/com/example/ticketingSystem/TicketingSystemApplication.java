@@ -1,10 +1,6 @@
 package com.example.ticketingSystem;
 
-import com.example.ticketingSystem.controller.config.Config;
-//import com.example.ticketingSystem.controller.entity.Vendor;
-import com.example.ticketingSystem.controller.util.CustomerRunnable;
-import com.example.ticketingSystem.controller.util.TicketPool;
-import com.example.ticketingSystem.controller.util.VendorRunnable;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,9 +17,7 @@ public class TicketingSystemApplication {
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(TicketingSystemApplication.class, args);
 
-
 	}
-
 
 
 	@Bean

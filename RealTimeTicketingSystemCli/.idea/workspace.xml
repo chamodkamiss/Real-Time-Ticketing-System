@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8df2b6b9-f1a3-4c07-8a0b-fae1bb95e867" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/Configure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/Configure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/TicketingSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/TicketingSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/src/main/java/com/example/ticketingSystem/controller/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/TicketingSystemApplication$WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/TicketingSystemApplication$WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/TicketingSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/TicketingSystemApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketingSystem/target/classes/com/example/ticketingSystem/controller/config/Config.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

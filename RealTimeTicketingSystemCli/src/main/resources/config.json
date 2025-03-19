@@ -1,6 +1,6 @@
 {
   "maxCapacity" : 1000,
-  "releaseRate" : 1000,
-  "retrievalRate" : 1500,
+  "releaseRate" : 1500,
+  "retrievalRate" : 1000,
   "totalTickets" : 100
 }

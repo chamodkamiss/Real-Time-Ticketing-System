@@ -1,8 +1,8 @@
 package com.example.ticketingSystem.controller;
 
-import com.example.ticketingSystem.controller.config.Config;
-import com.example.ticketingSystem.controller.dto.TicketDto;
-import com.example.ticketingSystem.controller.service.TicketService;
+import com.example.ticketingSystem.config.Config;
+import com.example.ticketingSystem.dto.TicketDto;
+import com.example.ticketingSystem.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -51,6 +51,5 @@ public class TicketController {
     public ResponseEntity<TicketDto> getTicketById(@PathVariable String ticketId){
         return ResponseEntity.ok(ticketService.getTicketById(ticketId));
     }
-
 
 }
